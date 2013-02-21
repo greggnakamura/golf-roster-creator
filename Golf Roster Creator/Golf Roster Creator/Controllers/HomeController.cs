@@ -19,6 +19,8 @@ namespace Golf_Roster_Creator.Controllers
 
             ViewBag.golfers = new SelectList(db.Query<Golfer>("SELECT * FROM Golfers ORDER BY Last ASC"), "GolferID", "FullName");
 
+            ViewBag.teeTimes = db.Query<TeeTime>("SELECT * FROM TeeTimes");
+
             return View();
         }
     }

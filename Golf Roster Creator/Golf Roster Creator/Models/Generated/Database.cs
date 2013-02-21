@@ -182,7 +182,90 @@ namespace Golf_Roster_Creator
 
 	}
     
+	[TableName("Golfers")]
+	[PrimaryKey("GolferID")]
+	[ExplicitColumns]
+    public partial class Golfer : Repo_GolferRosterCreator.Record<Golfer>  
+    {
+        [Column] 
+		public int GolferID 
+		{ 
+			get
+			{
+				return _GolferID;
+			}
+			set
+			{
+				_GolferID = value;
+				MarkColumnModified("GolferID");
+			}
+		}
+		int _GolferID;
+
+        [Column("First")] 
+		public string _First 
+		{ 
+			get
+			{
+				return __First;
+			}
+			set
+			{
+				__First = value;
+				MarkColumnModified("First");
+			}
+		}
+		string __First;
+
+        [Column] 
+		public string Last 
+		{ 
+			get
+			{
+				return _Last;
+			}
+			set
+			{
+				_Last = value;
+				MarkColumnModified("Last");
+			}
+		}
+		string _Last;
+
+        [Column] 
+		public string FullName 
+		{ 
+			get
+			{
+				return _FullName;
+			}
+			set
+			{
+				_FullName = value;
+				MarkColumnModified("FullName");
+			}
+		}
+		string _FullName;
+
+        [Column] 
+		public string Email 
+		{ 
+			get
+			{
+				return _Email;
+			}
+			set
+			{
+				_Email = value;
+				MarkColumnModified("Email");
+			}
+		}
+		string _Email;
+
+	}
+    
 	[TableName("TeeTimes")]
+	[PrimaryKey("TeeTimeId")]
 	[ExplicitColumns]
     public partial class TeeTime : Repo_GolferRosterCreator.Record<TeeTime>  
     {
@@ -290,88 +373,6 @@ namespace Golf_Roster_Creator
 			}
 		}
 		string _Golfer5;
-
-	}
-    
-	[TableName("Golfers")]
-	[PrimaryKey("GolferID")]
-	[ExplicitColumns]
-    public partial class Golfer : Repo_GolferRosterCreator.Record<Golfer>  
-    {
-        [Column] 
-		public int GolferID 
-		{ 
-			get
-			{
-				return _GolferID;
-			}
-			set
-			{
-				_GolferID = value;
-				MarkColumnModified("GolferID");
-			}
-		}
-		int _GolferID;
-
-        [Column("First")] 
-		public string _First 
-		{ 
-			get
-			{
-				return __First;
-			}
-			set
-			{
-				__First = value;
-				MarkColumnModified("First");
-			}
-		}
-		string __First;
-
-        [Column] 
-		public string Last 
-		{ 
-			get
-			{
-				return _Last;
-			}
-			set
-			{
-				_Last = value;
-				MarkColumnModified("Last");
-			}
-		}
-		string _Last;
-
-        [Column] 
-		public string FullName 
-		{ 
-			get
-			{
-				return _FullName;
-			}
-			set
-			{
-				_FullName = value;
-				MarkColumnModified("FullName");
-			}
-		}
-		string _FullName;
-
-        [Column] 
-		public string Email 
-		{ 
-			get
-			{
-				return _Email;
-			}
-			set
-			{
-				_Email = value;
-				MarkColumnModified("Email");
-			}
-		}
-		string _Email;
 
 	}
     

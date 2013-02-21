@@ -29,69 +29,83 @@ namespace Golf_Roster_Creator.Controllers
             return View();
         }
 
-        //
-        // GET: /TeeTime/Details/5
-
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        //
-        // GET: /TeeTime/Create
-
+        /// <summary>
+        /// Create Tee Timee
+        /// </summary>
+        /// <param name="teeTimeModel"></param>
+        /// <returns></returns>
         public ActionResult Create()
         {
             var db = new Database(ConnectionHelper.ConnectionStringName);
-            var golfers = db.Query<Golfer>("SELECT First, Last FROM Golfers");
+            ViewBag.golfers = new SelectList(db.Query<Golfer>("SELECT * FROM Golfers ORDER BY Last ASC"), "FullName", "FullName");
 
-            foreach (var item in golfers)
-            {
-                ViewBag.GolferFullName = item._First + " " + item.Last; 
-            }
-
-            return View(ViewBag.GolferFullName);
+            return View();
         }
 
-        //
-        // POST: /TeeTime/Create
-
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(TeeTime teeTimeModel)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                // Create new object
+                var newTeeTime = new TeeTime();
 
-                return RedirectToAction("Index");
+                // Set data
+                newTeeTime._TeeTime = teeTimeModel._TeeTime;
+                newTeeTime.Golfer1 = teeTimeModel.Golfer1;
+                newTeeTime.Golfer2 = teeTimeModel.Golfer2;
+                newTeeTime.Golfer3 = teeTimeModel.Golfer3;
+                newTeeTime.Golfer4 = teeTimeModel.Golfer4;
+                newTeeTime.Golfer5 = teeTimeModel.Golfer5;
+
+                newTeeTime.Save();
+
+                return RedirectToAction("Index", "Home");
             }
-            catch
+            else
             {
                 return View();
             }
         }
-
-        //
-        // GET: /TeeTime/Edit/5
-
+    
+        /// <summary>
+        /// Edit Tee Time
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Edit(int id)
         {
-            return View();
+            var db = new Database(ConnectionHelper.ConnectionStringName);
+            ViewBag.golfers = new SelectList(db.Query<Golfer>("SELECT * FROM Golfers ORDER BY Last ASC"), "FullName", "FullName");
+
+            var teeTime = TeeTime.SingleOrDefault(id);
+            return View(teeTime);
         }
 
-        //
-        // POST: /TeeTime/Edit/5
-
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, TeeTime teeTimeModel)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add update logic here
+                var teeTime = TeeTime.SingleOrDefault(id);
 
-                return RedirectToAction("Index");
+                teeTime._TeeTime = teeTimeModel._TeeTime;
+                teeTime.Golfer1 = teeTimeModel.Golfer1;
+                teeTime.Golfer2 = teeTimeModel.Golfer2;
+                teeTime.Golfer3 = teeTimeModel.Golfer3;
+                teeTime.Golfer4 = teeTimeModel.Golfer4;
+                teeTime.Golfer5 = teeTimeModel.Golfer5;
+
+                teeTime.Save();
+
+                return RedirectToAction("Index", "Home");
             }
-            catch
+            else
             {
                 return View();
             }
