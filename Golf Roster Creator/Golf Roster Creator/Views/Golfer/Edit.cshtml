@@ -1,0 +1,66 @@
+﻿@model Golf_Roster_Creator.Golfer
+
+@{
+    ViewBag.Title = "Edit Golfer";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+
+            <h2>@ViewBag.Title</h2>
+
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.HiddenFor(model => model.GolferID)
+
+                <div class="editor-container">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model._First, "First name:")
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model._First)
+                        @Html.ValidationMessageFor(model => model._First)
+                    </div>
+                </div>
+
+                <div class="editor-container">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Last, "Last name:")
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Last)
+                        @Html.ValidationMessageFor(model => model.Last)
+                    </div>
+                </div>
+
+                <div class="editor-container">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Email, "Email Address:")
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Email)
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+
+                <p>
+                    <input type="submit" class="btn btn-primary" value="Save" />
+                    @Html.ActionLink("Cancel", "Index", "Golfer", null, new { @class = "btn" })
+                </p>
+
+            }
+
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

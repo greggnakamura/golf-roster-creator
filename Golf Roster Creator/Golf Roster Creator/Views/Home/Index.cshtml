@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Golf_Roster_Creator.ViewModels.HomePageViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <!-- Course Selection -->
+            <div class="golf-course alert alert-info">
+                <div class="left">
+                    <strong><i class="icon-globe"></i>Select Golf Course: </strong>
+                    @*<select>
+                        <option ng-repeat="course in courses" value="{{course.id}}">{{course.name}}</option>
+                    </select>*@
+
+                    @Html.DropDownList("Course", (IEnumerable<SelectListItem>) ViewBag.courses, "--Select Course--")
+
+                </div>
+                <div class="right">
+                    <strong><i class="icon-calendar"></i>Date:</strong>
+                    <input type="text" placeholder="Select date" id="datepicker" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="span12" style="text-align: center;">
+            <button class="btn btn-primary" ng-click="add()">Add</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <fieldset class="well">
+                <legend>Left</legend>
+                @*<select id="golfers">
+                    <option ng-repeat="golfer in golfers" value="{{golfer.GolferID}}">{{golfer._First}} {{golfer.Last}}
+                    </option>
+                </select>*@
+
+                @Html.DropDownList("Golfer", (IEnumerable<SelectListItem>) ViewBag.golfers, "--Select Golfer--")
+
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Golf Roster Creator.Tests.dll.config
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Golf Roster Creator.Tests.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Golf Roster Creator.Tests.pdb
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Golf Roster Creator.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Net.Http.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Net.Http.WebRequest.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Helpers.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Http.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Mvc.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Razor.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.WebPages.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\EntityFramework.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Optimization.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Microsoft.Web.WebPages.OAuth.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.AspNet.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\WebGrease.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.Core.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OAuth.Consumer.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OAuth.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OpenId.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Antlr3.Runtime.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Golf Roster Creator.pdb
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Net.Http.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Net.Http.WebRequest.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Helpers.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Http.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Mvc.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.Razor.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.WebPages.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\EntityFramework.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\Microsoft.Web.WebPages.OAuth.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.AspNet.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.Core.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OAuth.Consumer.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OAuth.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\bin\Debug\DotNetOpenAuth.OpenId.xml
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\obj\Debug\Golf Roster Creator.Tests.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\obj\Debug\Golf Roster Creator.Tests.dll
+C:\inetpub\wwwroot\GitHub\MVC - Golf Roster\Golf Roster Creator\Golf Roster Creator.Tests\obj\Debug\Golf Roster Creator.Tests.pdb
