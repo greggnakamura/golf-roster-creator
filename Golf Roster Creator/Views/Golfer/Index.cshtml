@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Golf_Roster_Creator.Golfer>
+
+@{
+    ViewBag.Title = "Golfer Management";
+}
+
+<div class="row">
+    <div class="span12">
+
+        <h2>@ViewBag.Title</h2>
+
+        <p>
+            @Html.ActionLink("Add Golfer", "Create", "Golfer", null, new { @class = "btn btn-info" })
+        </p>
+        <table class="table table-condensed table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <label>First name</label>
+                    </th>
+                    <th>
+                        <label>Last name</label>
+                    </th>
+                    <th>
+                        <label>Email Address</label>
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item._First)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Last)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.GolferID }, new { @class = "btn btn-success btn-small" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.GolferID }, new { @class = "btn btn-small" })
+                        </td>
+                    </tr>
+                </tbody>
+            }
+
+        </table>
+
+    </div>
+</div>

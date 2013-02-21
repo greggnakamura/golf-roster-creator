@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Golf_Roster_Creator.ViewModels.HomePageViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="span12">
+        <!-- Course Selection -->
+        <div class="golf-course alert alert-info">
+            <div class="left">
+                <strong><i class="icon-globe"></i>Select Golf Course: </strong>
+                @*<select>
+                        <option ng-repeat="course in courses" value="{{course.id}}">{{course.name}}</option>
+                    </select>*@
+
+                @Html.DropDownList("Course", (IEnumerable<SelectListItem>)ViewBag.courses, "--Select Course--")
+            </div>
+            <div class="right">
+                <strong><i class="icon-calendar"></i>Date:</strong>
+                <input type="text" placeholder="Select date" id="datepicker" />
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="span12" style="text-align: center;">
+        @Html.ActionLink("Add 4-some / 5-some", "Create", "TeeTime", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Reset", "Update", "TeeTime", null, new { @class = "btn btn-danger" })
+    </div>
+</div>
+<div class="row">
+    <div class="span4">
+        <fieldset class="well">
+            <legend>Left</legend>
+
+            <div ng-repeat="teetime in teetimes">{{teetime.TeeTimeId}}</div>
+
+            @*@(Json.Encode(ViewBag.teeTimes)*@
+
+        </fieldset>
+
+        <p>@Html.ActionLink("Edit Tee Time", "Edit", "TeeTime", new { id = 1 }, new { @class = "btn" })</p>
+    </div>
+</div>
+
+<script>
+    var jsonTeeTimes = '@(Json.Encode(ViewBag.teeTimes))';
+</script>

@@ -1,0 +1,38 @@
+﻿@model Golf_Roster_Creator.Course
+
+@{
+    ViewBag.Title = "Delete Course?";
+}
+<div class="row">
+    <div class="span12">
+        <h2>@ViewBag.Title</h2>
+
+        <h3>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</h3>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Name): 
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Phone): 
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Phone)
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            <p>
+                <input type="submit" class="btn btn-danger" value="Delete" />
+                @Html.ActionLink("Cancel", "Index", null, new { @class = "btn" })
+            </p>
+        }
+    </div>
+</div>

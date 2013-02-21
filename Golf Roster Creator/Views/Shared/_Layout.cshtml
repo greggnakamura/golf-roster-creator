@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-controller="GolferCtrl">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="nav-collapse collapse">
+                        @*<section id="login">
+                            @Html.ActionLink("your logo here", "Index", "Home")
+                            @Html.Partial("_LoginPartial")
+                        </section>*@
+                        <ul class="nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Golfers", "Index", "Golfer")</li>
+                            <li>@Html.ActionLink("Course", "Index", "Course")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="featured">
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>Golf Roster Creator</h1>
+                <p class="lead">Create tee-times with player grouping, then export to an Excel file</p>
+            </div>
+        </header>
+    </section>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    &copy; @DateTime.Now.Year
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/main")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

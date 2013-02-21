@@ -1,0 +1,46 @@
+﻿@model Golf_Roster_Creator.Course
+
+@{
+    ViewBag.Title = "Create Course";
+}
+
+<div class="row">
+    <div class="span12">
+        <h2>@ViewBag.Title</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+
+            <div class="editor-container">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+            </div>
+
+            <div class="editor-container">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Phone)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Phone)
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </div>
+            </div>
+
+            <p>
+                <input type="submit" class="btn btn-info" value="Create" />
+                @Html.ActionLink("Cancel", "Index", null, new { @class = "btn" })
+            </p>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
