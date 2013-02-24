@@ -5,7 +5,9 @@
     <title>@ViewBag.Title - My ASP.NET MVC Application</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/themes/base/css")
     @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/timepicker")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -55,9 +57,25 @@
 
     <!-- Scripts -->
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/timepicker")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/main")
     @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $("#datepicker").datepicker();
+                $('.time-selection').timepicker({
+                    'step': 1,
+                    'minTime': '9:00am',
+                    'maxTime': '11:00am'
+                });
+            });
+        })(jQuery);
+    </script>
+
 </body>
 </html>

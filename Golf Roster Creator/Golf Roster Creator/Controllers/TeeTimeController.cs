@@ -16,16 +16,6 @@ namespace Golf_Roster_Creator.Controllers
 
         public ActionResult Index()
         {
-            //var db = new Database(ConnectionHelper.ConnectionStringName);
-            //var golfers = db.Query<Golfer>("SELECT First, Last FROM Golfers");
-
-            //ViewBag.sb = new System.Text.StringBuilder();
-
-            //foreach (var item in golfers)
-            //{
-            //    ViewBag.sb.Append("\"" + item._First + " " + item.Last + "\", ");
-            //}
-
             return View();
         }
 
@@ -52,16 +42,38 @@ namespace Golf_Roster_Creator.Controllers
         {
             if(ModelState.IsValid)
             {
+                // String.Replace time
+                var timeStringIndex = 0;
+                var updatedTimeInput = "";
+                var timeInput = teeTimeModel._TeeTime;
+
+                timeStringIndex = timeInput.IndexOf("9:");
+
                 // Create new object
                 var newTeeTime = new TeeTime();
 
+                if (timeStringIndex == 0)
+                {
+                    updatedTimeInput = timeInput.Replace("9:", "09:");
+                    newTeeTime._TeeTime = updatedTimeInput;
+                }
+                else
+                {
+                    newTeeTime._TeeTime = teeTimeModel._TeeTime;
+                }
+
                 // Set data
-                newTeeTime._TeeTime = teeTimeModel._TeeTime;
                 newTeeTime.Golfer1 = teeTimeModel.Golfer1;
                 newTeeTime.Golfer2 = teeTimeModel.Golfer2;
                 newTeeTime.Golfer3 = teeTimeModel.Golfer3;
                 newTeeTime.Golfer4 = teeTimeModel.Golfer4;
                 newTeeTime.Golfer5 = teeTimeModel.Golfer5;
+                newTeeTime.WalkRide1 = teeTimeModel.WalkRide1;
+                newTeeTime.WalkRide2 = teeTimeModel.WalkRide2;
+                newTeeTime.WalkRide3 = teeTimeModel.WalkRide3;
+                newTeeTime.WalkRide4 = teeTimeModel.WalkRide4;
+                newTeeTime.WalkRide5 = teeTimeModel.WalkRide5;
+
 
                 newTeeTime.Save();
 
@@ -92,14 +104,36 @@ namespace Golf_Roster_Creator.Controllers
         {
             if(ModelState.IsValid)
             {
+                // String.Replace time
+                var timeStringIndex = 0;
+                var updatedTimeInput = "";
+                var timeInput = teeTimeModel._TeeTime;
+
+                timeStringIndex = timeInput.IndexOf("9:");
+
+                // Set data
                 var teeTime = TeeTime.SingleOrDefault(id);
 
-                teeTime._TeeTime = teeTimeModel._TeeTime;
+                if (timeStringIndex == 0)
+                {
+                    updatedTimeInput = timeInput.Replace("9:", "09:");
+                    teeTime._TeeTime = updatedTimeInput;
+                }
+                else 
+                {
+                    teeTime._TeeTime = teeTimeModel._TeeTime;
+                }
+                
                 teeTime.Golfer1 = teeTimeModel.Golfer1;
                 teeTime.Golfer2 = teeTimeModel.Golfer2;
                 teeTime.Golfer3 = teeTimeModel.Golfer3;
                 teeTime.Golfer4 = teeTimeModel.Golfer4;
                 teeTime.Golfer5 = teeTimeModel.Golfer5;
+                teeTime.WalkRide1 = teeTimeModel.WalkRide1;
+                teeTime.WalkRide2 = teeTimeModel.WalkRide2;
+                teeTime.WalkRide3 = teeTimeModel.WalkRide3;
+                teeTime.WalkRide4 = teeTimeModel.WalkRide4;
+                teeTime.WalkRide5 = teeTimeModel.WalkRide5;
 
                 teeTime.Save();
 
@@ -111,27 +145,32 @@ namespace Golf_Roster_Creator.Controllers
             }
         }
 
-        //
-        // GET: /TeeTime/Delete/5
-
+        /// <summary>
+        /// Delete all tee times
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Delete(int id)
         {
-            return View();
+            var teeTimes = TeeTime.SingleOrDefault(id);
+            return View(teeTimes);
         }
 
         //
         // POST: /TeeTime/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, TeeTime teeTimeModel)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            //var golfer = TeeTime.SingleOrDefault(id);
 
-                return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                teeTimeModel.TeeTimeId = id;
+                teeTimeModel.Delete();
+                return RedirectToAction("Index", "Home");
             }
-            catch
+            else
             {
                 return View();
             }

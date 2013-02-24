@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Golf_Roster_Creator.TeeTime>
+
+@{
+    ViewBag.Title = "test";
+}
+
+<h2>test</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model._TeeTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Golfer1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Golfer2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Golfer3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Golfer4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Golfer5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item._TeeTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Golfer1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Golfer2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Golfer3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Golfer4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Golfer5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TeeTimeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TeeTimeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TeeTimeId })
+        </td>
+    </tr>
+}
+
+</table>

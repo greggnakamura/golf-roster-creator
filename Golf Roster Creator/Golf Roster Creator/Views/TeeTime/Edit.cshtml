@@ -18,7 +18,7 @@
                     @Html.LabelFor(model => model._TeeTime, "Tee Time")
                 </div>
                 <div class="editor-field">
-                    @Html.EditorFor(model => model._TeeTime)
+                    @Html.TextBoxFor(model => model._TeeTime, new { @class = "time-selection" })
                     @Html.ValidationMessageFor(model => model._TeeTime)
                 </div>
             </div>
@@ -29,6 +29,7 @@
                 <div class="editor-field">
                     @Html.DropDownListFor(model => model.Golfer1, (IEnumerable<SelectListItem>)ViewBag.golfers, "-- Select Golfer --")
                     @Html.ValidationMessageFor(model => model.Golfer1)
+                    @Html.DropDownListFor(model => model.WalkRide1, new SelectList(new[] { "Walk","Ride" }), "Walking or Riding?")
                 </div>
             </div>
             <div class="editor-container">
@@ -38,6 +39,7 @@
                 <div class="editor-field">
                     @Html.DropDownListFor(model => model.Golfer2, (IEnumerable<SelectListItem>)ViewBag.golfers, "-- Select Golfer --")
                     @Html.ValidationMessageFor(model => model.Golfer2)
+                    @Html.DropDownListFor(model => model.WalkRide2, new SelectList(new[] { "Walk","Ride" }), "Walking or Riding?")
                 </div>
             </div>
             <div class="editor-container">
@@ -47,6 +49,7 @@
                 <div class="editor-field">
                     @Html.DropDownListFor(model => model.Golfer3, (IEnumerable<SelectListItem>)ViewBag.golfers, "-- Select Golfer --")
                     @Html.ValidationMessageFor(model => model.Golfer3)
+                    @Html.DropDownListFor(model => model.WalkRide3, new SelectList(new[] { "Walk","Ride" }), "Walking or Riding?")
                 </div>
             </div>
             <div class="editor-container">
@@ -56,6 +59,7 @@
                 <div class="editor-field">
                     @Html.DropDownListFor(model => model.Golfer4, (IEnumerable<SelectListItem>)ViewBag.golfers, "-- Select Golfer --")
                     @Html.ValidationMessageFor(model => model.Golfer4)
+                    @Html.DropDownListFor(model => model.WalkRide4, new SelectList(new[] { "Walk","Ride" }), "Walking or Riding?")
                 </div>
             </div>
             <div class="editor-container">
@@ -65,11 +69,12 @@
                 <div class="editor-field">
                     @Html.DropDownListFor(model => model.Golfer5, (IEnumerable<SelectListItem>)ViewBag.golfers, "-- Select Golfer --")
                     @Html.ValidationMessageFor(model => model.Golfer5)
+                    @Html.DropDownListFor(model => model.WalkRide5, new SelectList(new[] { "Walk","Ride" }), "Walking or Riding?")
                 </div>
             </div>
 
             <p>
-                <input type="submit" class="btn btn-info" value="Edit" />
+                <input type="submit" class="btn btn-info" value="Save" />
                 @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn" })
             </p>
         }

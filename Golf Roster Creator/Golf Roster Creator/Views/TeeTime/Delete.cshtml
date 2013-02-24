@@ -1,0 +1,65 @@
+﻿@model Golf_Roster_Creator.TeeTime
+
+@{
+    ViewBag.Title = "Delete Tee Time";
+}
+<div class="row">
+    <div class="span12">
+        <h2>@ViewBag.Title</h2>
+
+        <h3>Are you sure you want to delete the @Html.DisplayFor(model => model._TeeTime) tee time?</h3>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Golfer1)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Golfer1)
+            </div>
+        </div>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Golfer2)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Golfer2)
+            </div>
+        </div>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Golfer3)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Golfer3)
+            </div>
+        </div>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Golfer4)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Golfer4)
+            </div>
+        </div>
+
+        <div class="display-container">
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Golfer5)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Golfer5)
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            <p>
+                <input class="btn btn-info" type="submit" value="Delete" /> 
+                @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn" })
+            </p>
+        }
+    </div>
+</div>

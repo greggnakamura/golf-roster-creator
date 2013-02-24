@@ -4,48 +4,56 @@
     ViewBag.Title = "Home Page";
 }
 
-
 <div class="row">
     <div class="span12">
         <!-- Course Selection -->
         <div class="golf-course alert alert-info">
             <div class="left">
                 <strong><i class="icon-globe"></i>Select Golf Course: </strong>
-                @*<select>
-                        <option ng-repeat="course in courses" value="{{course.id}}">{{course.name}}</option>
-                    </select>*@
-
-                @Html.DropDownList("Course", (IEnumerable<SelectListItem>)ViewBag.courses, "--Select Course--")
+                @Html.DropDownList("Course", (IEnumerable<SelectListItem>)ViewBag.courses, "--Select Course--", new { ng_model = "selectedCourse" })
             </div>
             <div class="right">
                 <strong><i class="icon-calendar"></i>Date:</strong>
-                <input type="text" placeholder="Select date" id="datepicker" />
+                <input type="text" ng-model="selectedDate" placeholder="Select date" />
             </div>
         </div>
     </div>
 </div>
-<hr>
-<div class="row">
-    <div class="span12" style="text-align: center;">
-        @Html.ActionLink("Add 4-some / 5-some", "Create", "TeeTime", null, new { @class = "btn btn-primary" })
-        @Html.ActionLink("Reset", "Update", "TeeTime", null, new { @class = "btn btn-danger" })
-    </div>
-</div>
-<div class="row">
-    <div class="span4">
-        <fieldset class="well">
-            <legend>Left</legend>
-
-            <div ng-repeat="teetime in teetimes">{{teetime.TeeTimeId}}</div>
-
-            @*@(Json.Encode(ViewBag.teeTimes)*@
-
-        </fieldset>
-
-        <p>@Html.ActionLink("Edit Tee Time", "Edit", "TeeTime", new { id = 1 }, new { @class = "btn" })</p>
+<div class="row course-info">
+    <div class="span12">
+        <span class="select-course">{{selectedCourse}}</span> - <span class="select-date">{{selectedDate}}</span>
     </div>
 </div>
 
-<script>
-    var jsonTeeTimes = '@(Json.Encode(ViewBag.teeTimes))';
-</script>
+<div class="row">
+    <div class="span12 tee-time-mgmt">
+        @Html.ActionLink("Add 4-some / 5-some", "Create", "TeeTime", null, new { @class = "btn btn-info" }) 
+        @Html.ActionLink("Reset", "Update", "TeeTime", null, new { @class = "btn" })
+    </div>
+</div>
+<div class="row">
+    @foreach (var item in Model) {
+        <div class="span4">
+            <fieldset class="well">
+                <legend class="alert alert-success">Tee Time: @Html.DisplayFor(modelItem => item.TeeTime)</legend>
+                <ul>
+                    <li><i class="icon-user"></i>@Html.DisplayFor(modelItem => item.Golfer1) - <span>(@Html.DisplayFor(modelItem => item.WalkRide1))</span></li>
+                    <li><i class="icon-user"></i>@Html.DisplayFor(modelItem => item.Golfer2) - <span>(@Html.DisplayFor(modelItem => item.WalkRide2))</span></li>
+                    @if(item.Golfer3 != null){
+                        <li><i class="icon-user"></i>@Html.DisplayFor(modelItem => item.Golfer3) - <span>(@Html.DisplayFor(modelItem => item.WalkRide3))</span></li>
+                    }
+                    @if(item.Golfer4 != null){
+                        <li><i class="icon-user"></i>@Html.DisplayFor(modelItem => item.Golfer4) - <span>(@Html.DisplayFor(modelItem => item.WalkRide4))</span></li>
+                    }
+                    @if(item.Golfer5 != null){
+                        <li><i class="icon-user"></i>@Html.DisplayFor(modelItem => item.Golfer5) - <span>(@Html.DisplayFor(modelItem => item.WalkRide5))</span></li>
+                    }
+                </ul>
+                <p>
+                    @Html.ActionLink("Edit Tee Time", "Edit", "TeeTime", new { id = item.TeeTimeId }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Delete", "Delete", "TeeTime", new { id = item.TeeTimeId }, new { @class = "btn" })
+                </p>
+            </fieldset>  
+        </div>
+    }
+</div>

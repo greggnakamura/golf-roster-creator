@@ -374,6 +374,81 @@ namespace Golf_Roster_Creator
 		}
 		string _Golfer5;
 
+        [Column] 
+		public string WalkRide1 
+		{ 
+			get
+			{
+				return _WalkRide1;
+			}
+			set
+			{
+				_WalkRide1 = value;
+				MarkColumnModified("WalkRide1");
+			}
+		}
+		string _WalkRide1;
+
+        [Column] 
+		public string WalkRide2 
+		{ 
+			get
+			{
+				return _WalkRide2;
+			}
+			set
+			{
+				_WalkRide2 = value;
+				MarkColumnModified("WalkRide2");
+			}
+		}
+		string _WalkRide2;
+
+        [Column] 
+		public string WalkRide3 
+		{ 
+			get
+			{
+				return _WalkRide3;
+			}
+			set
+			{
+				_WalkRide3 = value;
+				MarkColumnModified("WalkRide3");
+			}
+		}
+		string _WalkRide3;
+
+        [Column] 
+		public string WalkRide4 
+		{ 
+			get
+			{
+				return _WalkRide4;
+			}
+			set
+			{
+				_WalkRide4 = value;
+				MarkColumnModified("WalkRide4");
+			}
+		}
+		string _WalkRide4;
+
+        [Column] 
+		public string WalkRide5 
+		{ 
+			get
+			{
+				return _WalkRide5;
+			}
+			set
+			{
+				_WalkRide5 = value;
+				MarkColumnModified("WalkRide5");
+			}
+		}
+		string _WalkRide5;
+
 	}
     
 	[TableName("sysdiagrams")]
